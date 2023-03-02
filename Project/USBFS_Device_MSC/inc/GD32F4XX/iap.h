@@ -41,7 +41,7 @@ OF SUCH DAMAGE.
 #include "gd32f4xx.h"
 #include "gd32f450i_eval.h"
 
-#define APPLICATIONADDRESS      ((uint32_t)0x08020000) /* Application Start Address */
+#define APPLICATIONADDRESS      ((uint32_t)0x08040000) /* Application Start Address */
 #define FLASH_STARTADDRESS      ((uint32_t)0x08000000) /* Flash Start Address */
 #define FLASH_ENDADDRESS        ((uint32_t)0x08100000) /* Flash End Address */
 

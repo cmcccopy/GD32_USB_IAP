@@ -38,6 +38,8 @@ OF SUCH DAMAGE.
 #include "usbd_msc_core.h"
 #include "usb_delay.h"
 #include "iap.h"
+#include "key.h"
+#include "led.h"
 
 usb_core_handle_struct usbhs_core_dev =
 {
@@ -73,12 +75,12 @@ pFunction Jump_To_Application;
 */
 int main(void)
 {
-    /* configure USER key */
-    gd_eval_key_init(KEY_USER, KEY_MODE_GPIO);
+    /* configure key */
+    key_init();
 
-    if(RESET != gd_eval_key_state_get(KEY_USER)){
-        /* configure LED1 */
-        gd_eval_led_init(LED1);
+    if(RESET == key_left()){
+        /* configure LED */
+        led_init();
 
         /* check and update the application */
         update_application();

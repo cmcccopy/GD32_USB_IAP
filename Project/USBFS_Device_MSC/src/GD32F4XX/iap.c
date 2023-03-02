@@ -37,6 +37,7 @@ OF SUCH DAMAGE.
 
 #include "iap.h"
 #include "ff.h"
+#include "led.h"
 
 FATFS fs;
 FIL file;
@@ -99,14 +100,14 @@ UPDATE_STATE update_application(void)
 
             /* update success, LED1 glitter 3 times */
             for(uint8_t i = 0; i < 6; i++){
-                gd_eval_led_toggle(LED1);
+                led1_open(G);
                 for(uint32_t j = 0; j < 10000000; j++);
             }
         } else {
             update_state = APP_UPDATEFAILD;
 
             /* delete update.bin */
-            f_unlink("2:update.bin");
+           f_unlink("2:update.bin");
 
             /* update fail, erase internal flash of written */
             for(uint32_t erase_sector = start_sector; erase_sector <= end_sector; erase_sector += 8){

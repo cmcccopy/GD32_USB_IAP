@@ -3495,9 +3495,9 @@ static FRESULT validate (	/* Returns FR_OK or FR_INVALID_OBJECT */
 /*-----------------------------------------------------------------------*/
 
 FRESULT f_mount (
-	FATFS* fs,			/* Pointer to the filesystem object (NULL:unmount)*/
-	const TCHAR* path,	/* Logical drive number to be mounted/unmounted */
-	BYTE opt			/* Mode option 0:Do not mount (delayed mount), 1:Mount immediately */
+	FATFS* fs,			/* Pointer to the filesystem object (NULL:unmount)*//*指向文件系统对象的指针(NULL:unmount)*/
+	const TCHAR* path,	/* Logical drive number to be mounted/unmounted *//*要挂载/卸载的逻辑盘号*/ 
+	BYTE opt			/* Mode option 0:Do not mount (delayed mount), 1:Mount immediately 模式选项0:不挂载(延迟挂载)，1:立即挂载*/
 )
 {
 	FATFS *cfs;
