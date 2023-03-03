@@ -80,9 +80,9 @@
             <nStopB2X>0</nStopB2X>
           </BeforeMake>
           <AfterMake>
-            <RunUserProg1>0</RunUserProg1>
+            <RunUserProg1>1</RunUserProg1>
             <RunUserProg2>0</RunUserProg2>
-            <UserProg1Name></UserProg1Name>
+            <UserProg1Name>D:\Keil_v5\ARM\ARMCC\bin\fromelf.exe --bin -o  ./GD32F450I-Output/boot.bin ./GD32F450I-Output/iap.axf</UserProg1Name>
             <UserProg2Name></UserProg2Name>
             <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
             <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
@@ -274,7 +274,7 @@
               <OCR_RVCT4>
                 <Type>1</Type>
                 <StartAddress>0x8000000</StartAddress>
-                <Size>0x100000</Size>
+                <Size>0x20000</Size>
               </OCR_RVCT4>
               <OCR_RVCT5>
                 <Type>1</Type>
@@ -337,7 +337,7 @@
               <MiscControls>--c99</MiscControls>
               <Define>USE_STDPERIPH_DRIVER GD32F450 USE_USBFS USE_SPI_FLASH</Define>
               <Undefine></Undefine>
-              <IncludePath>..\inc\GD32F4XX;..\..\..\Firmware\CMSIS\CM4;..\..\..\Firmware\CMSIS\GD\GD32F4xx\Include;..\..\..\Firmware\GD_Firmware\GD32F4xx_standard_peripheral\Include;..\..\..\Firmware\GD_usbfs_driver\GD32F4XX\Include;..\..\..\Firmware\Board\GD32F4XX;..\..\..\Third_Party\fat_fs\inc</IncludePath>
+              <IncludePath>..\inc\GD32F4XX;..\..\..\Firmware\CMSIS\CM4;..\..\..\Firmware\CMSIS\GD\GD32F4xx\Include;..\..\..\Firmware\GD_Firmware\GD32F4xx_standard_peripheral\Include;..\..\..\Firmware\GD_usbfs_driver\GD32F4XX\Include;..\..\..\Firmware\Board\GD32F4XX;..\..\..\Third_Party\fat_fs\inc;..\src\GD32F4XX</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -420,6 +420,16 @@
               <FileName>usbd_stroage_access.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\src\GD32F4XX\usbd_stroage_access.c</FilePath>
+            </File>
+            <File>
+              <FileName>key.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\src\GD32F4XX\key.c</FilePath>
+            </File>
+            <File>
+              <FileName>led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\src\GD32F4XX\led.c</FilePath>
             </File>
           </Files>
         </Group>

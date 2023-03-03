@@ -78,7 +78,7 @@ int main(void)
     /* configure key */
     key_init();
 
-    if(RESET == key_left()){
+    if(RESET == key_OK()|| RESET ==key_right()){
         /* configure LED */
         led_init();
 

@@ -64,7 +64,7 @@ DSTATUS disk_status (
     case DEV_SPI_FLASH :
         // translate the reslut code here
 #ifdef USE_SPI_FLASH
-        if(0xC84015U == spi_flash_read_id())
+        if(0xEF4018 == spi_flash_read_id())
         {
             stat = RES_OK;
         } 

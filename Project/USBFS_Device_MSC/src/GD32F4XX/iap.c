@@ -101,7 +101,7 @@ UPDATE_STATE update_application(void)
             /* update success, LED1 glitter 3 times */
             for(uint8_t i = 0; i < 6; i++){
                 led1_open(G);
-                for(uint32_t j = 0; j < 10000000; j++);
+               // for(uint32_t j = 0; j < 10000000; j++);
             }
         } else {
             update_state = APP_UPDATEFAILD;
